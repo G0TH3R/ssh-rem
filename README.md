@@ -1,4 +1,4 @@
-# Title: sublime_script
+# Title: ssh_script.sh
 Author: G0TH3R
 
 
