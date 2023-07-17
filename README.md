@@ -1,4 +1,4 @@
-# Title: ssh_script.sh
+# ssh_script
 Author: G0TH3R
 
 
@@ -34,6 +34,6 @@ sshpass -p "$remote_password" ssh \
 
 
 
-## Copyright 2021 G0TH3R
+## Copyright 2023 G0TH3R
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
