@@ -8,8 +8,8 @@ Author: G0TH3R
 # Script to SSH into a remote server using sshpass and specific SSH options
 
 # Check if all required arguments are provided
-if [ $# -ne 3 ]; then
-    echo "Usage: $0 <remote_user> <remote_password> <remote_host>"
+if [ $# -le 3 ]; then
+    echo "Usage: $0 <remote_user> <remote_password> <remote_host> [port]"
     exit 1
 fi
 
@@ -17,12 +17,14 @@ fi
 remote_user="$1"
 remote_password="$2"
 remote_host="$3"
+port="${4:-22}"
 
 
 # SSH command with sshpass and SSH options
 sshpass -p "$remote_password" ssh \
 -o "UserKnownHostsFile=/dev/null" \
 -o "StrictHostKeyChecking=no" \
+-p "$port" \
 "$remote_user@$remote_host"
 
 
